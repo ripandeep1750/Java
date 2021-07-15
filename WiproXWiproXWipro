@@ -1,1 +1,22 @@
+Given two strings, word and a separator, return a big string made of count occurrences of the word, separated by the separator string.
+if the inputs are "Wipro","X" and 3 then the output is "WiproXWiproXWipro".
 
+public class Ques{
+    public static void main(String[] args) {
+        String str1="Wipro";
+        String str2="X";
+        int x=3;
+        System.out.println(repeatString(str1, str2, x));
+
+    }
+    public static String repeatString(String s1, String s2, int y) {
+        String dummy="";
+        for(int i=1; i<=y; i++) {
+            dummy+=s1;
+                if(i!=y) {
+                    dummy+=s2;  
+                }
+        }
+        return dummy;
+    }
+}
